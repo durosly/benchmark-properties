@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: var(--font-roboto);
+}
+
+.housing {
+	background-image: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.8),
+			rgba(0, 0, 0, 0.5)
+		),
+		url(/images/housing.jpg);
+}
+
+.corner {
+	width: var(--size);
+	aspect-ratio: 1;
+
+	background-image: radial-gradient(
+		circle at 100% 100%,
+		var(--c1) var(--size),
+		var(--c2) var(--size)
+	);
+}
