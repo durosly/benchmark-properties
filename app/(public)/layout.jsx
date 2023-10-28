@@ -108,8 +108,8 @@ export default function PublicLayout({ children }) {
 					</nav>
 					<nav>
 						<header className="footer-title">Company</header>
-						<a className="link link-hover">About us</a>
-						<a className="link link-hover">Contact</a>
+						<Link href="/about-us">About Us</Link>
+						<Link href="/contact">Contact</Link>
 						<a className="link link-hover">Locations</a>
 						<a className="link link-hover">Rooms</a>
 					</nav>
