@@ -83,7 +83,7 @@ function AboutUsPage() {
 					the perfect student accommodation is a crucial decision in
 					your academic journey. Here&apos;s why you should choose us:
 				</p>
-				<div className="flex flex-wrap gap-10">
+				<div className="flex flex-wrap gap-10 mb-20">
 					<div className="sm:w-[calc((100%_-_2.5rem)_/_2)] md:w-[calc((100%_-_2.5rem_*_2)_/_3)] text-center border py-10 px-10 rounded-2xl bg-primary/10 border-primary">
 						<h3 className="font-bold text-xl mb-5">
 							Specialized for Students
@@ -161,6 +161,14 @@ function AboutUsPage() {
 						</p>
 					</div>
 				</div>
+				<p>
+					Choosing Benchmark Real Estate Company means choosing a
+					student accommodation experience that is tailored to your
+					academic and personal growth. We are committed to helping
+					you make the most of your university years. Join our
+					community today and discover the ideal place to call home
+					during your educational journey.
+				</p>
 			</div>
 
 			<div className="text-center mb-20 ">

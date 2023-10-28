@@ -100,12 +100,12 @@ export default function PublicLayout({ children }) {
 							Realty Management since 2008
 						</p>
 					</aside>
-					<nav>
+					{/* <nav>
 						<header className="footer-title">Services</header>
 						<a className="link link-hover">Design</a>
 						<a className="link link-hover">Marketing</a>
 						<a className="link link-hover">Advertisement</a>
-					</nav>
+					</nav> */}
 					<nav>
 						<header className="footer-title">Company</header>
 						<Link href="/about-us">About Us</Link>
@@ -120,6 +120,9 @@ export default function PublicLayout({ children }) {
 						</a>
 						<a className="link link-hover">Policies</a>
 						{/* <a className="link link-hover">Cookie policy</a> */}
+					</nav>
+					<nav>
+						<header className="footer-title">Social Media</header>
 					</nav>
 				</footer>
 				<footer className="footer footer-center p-4 bg-black/20">
