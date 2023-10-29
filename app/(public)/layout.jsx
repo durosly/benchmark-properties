@@ -3,6 +3,7 @@ import Link from "next/link";
 import logo from "@/logos/logo-main.png";
 import logoWithText from "@/logos/logo-main-with-text.png";
 import NavLink from "./components/nav-links";
+import "react-slideshow-image/dist/styles.css";
 
 export default function PublicLayout({ children }) {
 	return (
@@ -126,8 +127,12 @@ export default function PublicLayout({ children }) {
 						>
 							Locations
 						</Link>
-
-						<a className="link link-hover">Rooms</a>
+						<Link
+							className="link link-hover"
+							href="/rooms"
+						>
+							Rooms
+						</Link>
 					</nav>
 					<nav>
 						<header className="footer-title">Legal</header>
