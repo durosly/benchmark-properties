@@ -3,7 +3,6 @@ import Link from "next/link";
 import logo from "@/logos/logo-main.png";
 import logoWithText from "@/logos/logo-main-with-text.png";
 import NavLink from "./components/nav-links";
-import "react-slideshow-image/dist/styles.css";
 
 export default function PublicLayout({ children }) {
 	return (
@@ -78,8 +77,10 @@ export default function PublicLayout({ children }) {
 								</ul>
 							</div>
 						</div>
-						<div className="navbar-end">
-							<a className="btn btn-primary">Find Apartment</a>
+						<div className="navbar-end pr-4 md:pr-10">
+							<a className="btn btn-sm sm:btn-md btn-primary">
+								Find Apartment
+							</a>
 						</div>
 					</div>
 					{/* Page content here */}
