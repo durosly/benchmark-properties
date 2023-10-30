@@ -1,7 +1,9 @@
+import logoWithText from "@/logos/logo-main-with-text.png";
+import logo from "@/logos/logo-main.png";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/logos/logo-main.png";
-import logoWithText from "@/logos/logo-main-with-text.png";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import NavLink from "./components/nav-links";
 
 export default function PublicLayout({ children }) {
@@ -145,6 +147,26 @@ export default function PublicLayout({ children }) {
 					</nav>
 					<nav>
 						<header className="footer-title">Social Media</header>
+						<div className="flex flex-wrap gap-3">
+							<a
+								href="/nice"
+								className=""
+							>
+								<FaXTwitter className="w-5 h-5 " />
+							</a>
+							<a
+								href="/nice"
+								className=""
+							>
+								<FaFacebookF className="w-5 h-5 " />
+							</a>
+							<a
+								href="/nice"
+								className=""
+							>
+								<BsWhatsapp className="w-5 h-5 " />
+							</a>
+						</div>
 					</nav>
 				</footer>
 				<footer className="footer footer-center p-4 bg-black/20">
