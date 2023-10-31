@@ -16,7 +16,7 @@ import {
 
 function AdminLayout({ children }) {
 	return (
-		<div className="drawer lg:drawer-open">
+		<div className="drawer max-sm:block lg:drawer-open">
 			<input
 				id="my-drawer-2"
 				type="checkbox"
@@ -128,19 +128,19 @@ function AdminLayout({ children }) {
 					</ul>
 					<ul className="menu menu-sm lg:menu-md">
 						<li></li>
-						<li class="menu-title flex flex-row gap-4">
+						<li className="menu-title flex flex-row gap-4">
 							<FiMousePointer className="w-5 h-5 text-fuchsia-600" />
 							<span>Actions</span>
 						</li>
 						<li>
 							<Link href="/admin/settings">
-								<FiSettings className="h-6 w-6" />
+								<FiSettings className="h-5 w-5" />
 								<span>Settings</span>
 							</Link>
 						</li>
 						<li>
 							<Link href="/admin/contacts">
-								<FiPhone className="h-6 w-6" />
+								<FiPhone className="h-5 w-5" />
 								<span>Contacts</span>
 							</Link>
 						</li>
