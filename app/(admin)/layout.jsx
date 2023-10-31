@@ -73,7 +73,7 @@ function AdminLayout({ children }) {
 						</div> */}
 					</div>
 				</div>
-				<main className="h-full w-full p-5 bg-base-200">
+				<main className="max-lg:min-h-screen h-full w-full p-5 bg-base-200">
 					{children}
 				</main>
 			</div>
