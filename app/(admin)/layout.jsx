@@ -116,7 +116,7 @@ function AdminLayout({ children }) {
 						<li>
 							<Link href="/admin/enquires">
 								<FiInfo className="h-6 w-6" />
-								<span>Enquires</span>
+								<span>Enquiries</span>
 							</Link>
 						</li>
 						<li>
