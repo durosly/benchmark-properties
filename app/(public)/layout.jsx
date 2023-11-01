@@ -3,12 +3,21 @@ import logo from "@/logos/logo-main.png";
 import Image from "next/image";
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
+import {
+	FiHome,
+	FiAlertCircle,
+	FiLayout,
+	FiMapPin,
+	FiLayers,
+} from "react-icons/fi";
 import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import NavLink from "./components/nav-links";
+import { NavigationEvents } from "./components/navigation-event";
 
 export default function PublicLayout({ children }) {
 	return (
 		<div className="drawer">
+			<NavigationEvents />
 			<input
 				id="my-drawer-3"
 				type="checkbox"
@@ -184,15 +193,49 @@ export default function PublicLayout({ children }) {
 					aria-label="close sidebar"
 					className="drawer-overlay"
 				></label>
-				<ul className="menu p-4 w-80 min-h-full bg-base-200">
-					{/* Sidebar content here */}
-					<li>
-						<a>Sidebar Item 1</a>
-					</li>
-					<li>
-						<a>Sidebar Item 2</a>
-					</li>
-				</ul>
+				<div className="p-4 w-80 min-h-full bg-base-100">
+					<div className="relative h-[100px] ml-6 aspect-square">
+						<Image
+							src={logoWithText}
+							fill
+							placeholder="blur"
+							className="object-contain"
+						/>
+					</div>
+					<ul className="menu ">
+						{/* Sidebar content here */}
+						<li>
+							<NavLink path="/">
+								<FiHome className="w-5 h-5" />
+								<span>Home</span>
+							</NavLink>
+						</li>
+						<li>
+							<NavLink path="/about-us">
+								<FiAlertCircle className="w-5 h-5" />
+								<span>About Us</span>
+							</NavLink>
+						</li>
+						<li>
+							<NavLink path="/rooms">
+								<FiLayout className="w-5 h-5" />
+								<span>Rooms</span>
+							</NavLink>
+						</li>
+						<li>
+							<NavLink path="/locations">
+								<FiMapPin className="w-5 h-5" />
+								<span>Locations</span>
+							</NavLink>
+						</li>
+						<li>
+							<NavLink path="/services">
+								<FiLayers className="w-5 h-5" />
+								<span>Services</span>
+							</NavLink>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	);
