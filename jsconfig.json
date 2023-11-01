@@ -3,7 +3,10 @@
     "paths": {
       "@/components/*": ["./components/*"],
       "@/*": ["./*"],
-      "@/logos/*": ["./public/logos/*"]
+      "@/logos/*": ["./public/logos/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/models/*": ["./models/*"],
+      "@/components*": ["./app/(public)/components/*"]
     }
   }
 }
