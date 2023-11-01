@@ -1,5 +1,6 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const roboto = Roboto({
 	subsets: ["latin"],
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${roboto.variable}`}>{children}</body>
+			<body className={`${roboto.variable}`}>
+				{children}
+				<Toaster richColors />
+			</body>
 		</html>
 	);
 }
