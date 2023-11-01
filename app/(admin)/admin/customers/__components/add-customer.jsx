@@ -1,6 +1,50 @@
 "use client";
+import { useState, useRef } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "sonner";
+import axios from "axios";
+import { handleClientError } from "@/lib/utils";
+import { queryClient } from "@/app/(public)/components/client-wrapper";
+
+const initialState = {
+	name: "",
+	email: "",
+	phone: "",
+};
 
 function AddCustomer() {
+	const [customer, setCustomer] = useState(initialState);
+
+	let toastId = useRef(null);
+
+	const { isPending, mutate } = useMutation({
+		mutationFn: (user) => {
+			toastId.current = toast.loading("Creating customer");
+			return axios.post("/api/admin/customers", user);
+		},
+		// make sure to _return_ the Promise from the query invalidation
+		// so that the mutation stays in `pending` state until the refetch is finished
+		onSettled: async () => {
+			return await queryClient.invalidateQueries({
+				queryKey: ["customers"],
+			});
+		},
+		onSuccess: () => {
+			setCustomer({ ...initialState });
+			toast.success("Customer created", { id: toastId.current });
+			document.getElementById("my_modal_2").close();
+		},
+		onError: (error) => {
+			const message = handleClientError(error);
+			toast.error(message, { id: toastId.current });
+		},
+	});
+
+	async function handleSubmit(e) {
+		e.preventDefault();
+		mutate(customer);
+	}
+
 	return (
 		<div>
 			<button
@@ -19,7 +63,10 @@ function AddCustomer() {
 			>
 				<div className="modal-box">
 					<h3 className="font-bold text-lg">Add new customer</h3>
-					<form action="">
+					<form
+						action=""
+						onSubmit={handleSubmit}
+					>
 						<div className="form-control">
 							<label
 								htmlFor="name"
@@ -31,7 +78,15 @@ function AddCustomer() {
 								type="text"
 								name="name"
 								id="name"
+								disabled={isPending}
 								className="input input-bordered"
+								value={customer.name}
+								onChange={(e) =>
+									setCustomer({
+										...customer,
+										[e.target.name]: e.target.value,
+									})
+								}
 							/>
 						</div>
 						<div className="form-control">
@@ -45,7 +100,15 @@ function AddCustomer() {
 								type="email"
 								name="email"
 								id="email"
+								disabled={isPending}
 								className="input input-bordered"
+								value={customer.email}
+								onChange={(e) =>
+									setCustomer({
+										...customer,
+										[e.target.name]: e.target.value,
+									})
+								}
 							/>
 						</div>
 						<div className="form-control mb-3">
@@ -60,9 +123,22 @@ function AddCustomer() {
 								name="phone"
 								id="phone"
 								className="input input-bordered"
+								value={customer.phone}
+								disabled={isPending}
+								onChange={(e) =>
+									setCustomer({
+										...customer,
+										[e.target.name]: e.target.value,
+									})
+								}
 							/>
 						</div>
-						<button className="btn btn-primary">Add</button>
+						<button
+							disabled={isPending}
+							className="btn btn-primary"
+						>
+							Add
+						</button>
 					</form>
 				</div>
 				<form
