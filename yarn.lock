@@ -799,6 +799,7 @@ __metadata:
     eslint: "npm:^8"
     eslint-config-next: "npm:13.5.6"
     mongoose: "npm:^8.0.0"
+    mongoose-paginate-v2: "npm:1.7.4"
     next: "npm:^14.0.1"
     next-auth: "npm:^4.24.4"
     next-dev-https: "npm:^0.13.3"
@@ -812,6 +813,7 @@ __metadata:
     sonner: "npm:^1.1.0"
     tailwind-merge: "npm:^2.0.0"
     tailwindcss: "npm:^3"
+    zod: "npm:^3.22.4"
   languageName: unknown
   linkType: soft
 
@@ -2995,6 +2997,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mongoose-paginate-v2@npm:1.7.4":
+  version: 1.7.4
+  resolution: "mongoose-paginate-v2@npm:1.7.4"
+  checksum: bb4f35ffd697657270df24b6b1692788df77aa424ce38e58f0d3bd80a9b154c3e0b4f1347e930babc41781baf4d7758c8b4f2efec12616d1944eac6836838579
+  languageName: node
+  linkType: hard
+
 "mongoose@npm:^8.0.0":
   version: 8.0.0
   resolution: "mongoose@npm:8.0.0"
@@ -4761,5 +4770,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.22.4":
+  version: 3.22.4
+  resolution: "zod@npm:3.22.4"
+  checksum: 7578ab283dac0eee66a0ad0fc4a7f28c43e6745aadb3a529f59a4b851aa10872b3890398b3160f257f4b6817b4ce643debdda4fb21a2c040adda7862cab0a587
   languageName: node
   linkType: hard
