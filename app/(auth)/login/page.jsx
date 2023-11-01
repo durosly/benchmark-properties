@@ -1,3 +1,5 @@
+import LoginForm from "./__components/login-form";
+
 function AdminLoginPage() {
 	return (
 		<div className="hero min-h-screen">
@@ -6,33 +8,7 @@ function AdminLoginPage() {
 					<h2 className="text-2xl font-bold text-center mt-5">
 						Admin Login
 					</h2>
-					<form className="card-body">
-						<div className="form-control">
-							<label className="label">
-								<span className="label-text">Email</span>
-							</label>
-							<input
-								type="email"
-								placeholder="email"
-								className="input input-bordered"
-								required
-							/>
-						</div>
-						<div className="form-control">
-							<label className="label">
-								<span className="label-text">Password</span>
-							</label>
-							<input
-								type="password"
-								placeholder="password"
-								className="input input-bordered"
-								required
-							/>
-						</div>
-						<div className="form-control mt-6">
-							<button className="btn btn-primary">Login</button>
-						</div>
-					</form>
+					<LoginForm />
 				</div>
 			</div>
 		</div>
