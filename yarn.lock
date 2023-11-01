@@ -305,6 +305,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.4.3":
+  version: 5.4.3
+  resolution: "@tanstack/query-core@npm:5.4.3"
+  checksum: 0c80ce07f23115fa3ec776d4858ec4e70ec85d98f5c9d0f4c23a00a94a012cf18bf49be563822064cb9188242a1ca072899413d1d590c4c95c9262be7889cfda
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.4.3":
+  version: 5.4.3
+  resolution: "@tanstack/react-query@npm:5.4.3"
+  dependencies:
+    "@tanstack/query-core": "npm:5.4.3"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: d2e1e6f41782c163d028d0742369c9c6fd2bdd74ebbe37f72a3261057670c00ad25909ed4d759d55f892f2312845fb9a2b3e6f8e74566e0acb903196b77286de
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -764,6 +789,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "benchmark-properties@workspace:."
   dependencies:
+    "@tanstack/react-query": "npm:^5.4.3"
     autoprefixer: "npm:^10"
     axios: "npm:^1.6.0"
     bcryptjs: "npm:^2.4.3"
