@@ -13,12 +13,15 @@ import {
 	FiPhone,
 	FiLogOut,
 } from "react-icons/fi";
+import { NavigationEvents } from "../(public)/components/navigation-event";
+import SignoutButton from "../(public)/components/signout-btn";
 
 function AdminLayout({ children }) {
 	return (
 		<div className="drawer max-sm:block lg:drawer-open">
+			<NavigationEvents />
 			<input
-				id="my-drawer-2"
+				id="my-drawer-3"
 				type="checkbox"
 				className="drawer-toggle"
 			/>
@@ -146,10 +149,10 @@ function AdminLayout({ children }) {
 						</li>
 					</ul>
 					<div className="menu">
-						<button className="btn btn-sm btn-error">
+						<SignoutButton className="btn btn-sm btn-error">
 							<span>logout</span>
 							<FiLogOut />
-						</button>
+						</SignoutButton>
 					</div>
 				</div>
 			</div>
