@@ -11,7 +11,7 @@ function Home() {
 	return (
 		<>
 			<div className="min-h-[450px] pt-28 px-5 text-center md:text-left md:px-20 pb-10 md:pb-0 housing bg-cover bg-center rounded-2xl mt-10 mb-20">
-				<h2 className="text-6xl text-white font-bold font-roboto max-w-xl">
+				<h2 className="text-6xl text-white font-bold font-roboto max-w-xl [font-size:clamp(2rem,8vw,3.75rem)]">
 					It&apos;s time to find a smart home
 				</h2>
 				<p className="text-white text-xl mt-10 mb-10 md:mb-10">
