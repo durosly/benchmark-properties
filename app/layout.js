@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import ClientWrapper from "./(public)/components/client-wrapper";
 
 const roboto = Roboto({
 	subsets: ["latin"],
@@ -17,8 +18,10 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={`${roboto.variable}`}>
-				{children}
-				<Toaster richColors />
+				<ClientWrapper>
+					{children}
+					<Toaster richColors />
+				</ClientWrapper>
 			</body>
 		</html>
 	);
