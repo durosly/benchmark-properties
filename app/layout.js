@@ -1,5 +1,6 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
 import { Toaster } from "sonner";
 import ClientWrapper from "./(public)/components/client-wrapper";
 
