@@ -795,9 +795,11 @@ __metadata:
     bcryptjs: "npm:^2.4.3"
     cloudinary: "npm:^1.41.0"
     clsx: "npm:^2.0.0"
+    comma-number: "npm:^2.1.0"
     daisyui: "npm:^3.9.3"
     eslint: "npm:^8"
     eslint-config-next: "npm:13.5.6"
+    luxon: "npm:^3.4.3"
     mongoose: "npm:^8.0.0"
     mongoose-paginate-v2: "npm:1.7.4"
     next: "npm:^14.0.1"
@@ -809,6 +811,7 @@ __metadata:
     react-device-detect: "npm:^2.2.3"
     react-dom: "npm:^18.2.0"
     react-icons: "npm:^4.11.0"
+    react-loading-skeleton: "npm:^3.3.1"
     react-share: "npm:^4.4.1"
     sonner: "npm:^1.1.0"
     tailwind-merge: "npm:^2.0.0"
@@ -1057,6 +1060,13 @@ __metadata:
   dependencies:
     delayed-stream: "npm:~1.0.0"
   checksum: 0dbb829577e1b1e839fa82b40c07ffaf7de8a09b935cadd355a73652ae70a88b4320db322f6634a4ad93424292fa80973ac6480986247f1734a1137debf271d5
+  languageName: node
+  linkType: hard
+
+"comma-number@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "comma-number@npm:2.1.0"
+  checksum: 088129c6cc06c473340c1d14c8fc6515d76b885e02fe52d5defe25820a5dd7c6ae7aa41ead8d77b8c0001d63696a7ed93f94a2fdcf0eede8b75a34dc277abe0c
   languageName: node
   linkType: hard
 
@@ -2772,6 +2782,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:^3.4.3":
+  version: 3.4.3
+  resolution: "luxon@npm:3.4.3"
+  checksum: 65ad727684d367af9c8fcbde05ad7989ef2436a4496b62d993059baaa641e90a5fa74e98f34ee2ff29f7af7f2b27238ca78b87834f9068624e4133d786f87bc7
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^11.0.3":
   version: 11.1.1
   resolution: "make-fetch-happen@npm:11.1.1"
@@ -3745,6 +3762,15 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
+  languageName: node
+  linkType: hard
+
+"react-loading-skeleton@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "react-loading-skeleton@npm:3.3.1"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 46ae989a74c59dd3f9ecfd480883f1b7a7b083e1329b618c948b889c218192db26148dfc0632e7b55fe0f8b22ddaf97001b539a5210f37045c3fc5b0adf68edc
   languageName: node
   linkType: hard
 
