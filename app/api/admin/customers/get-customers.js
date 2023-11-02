@@ -11,8 +11,6 @@ async function getCustomers(request) {
 
 		const q = searchParams.get("q");
 
-		await connectMongo();
-
 		const query = {};
 
 		if (!!q) {
