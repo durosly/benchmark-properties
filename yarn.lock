@@ -805,6 +805,7 @@ __metadata:
     next: "npm:^14.0.1"
     next-auth: "npm:^4.24.4"
     next-dev-https: "npm:^0.13.3"
+    phone: "npm:^3.1.41"
     postcss: "npm:^8"
     react: "npm:^18.2.0"
     react-copy-to-clipboard: "npm:^5.1.0"
@@ -3504,6 +3505,13 @@ __metadata:
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
   checksum: 666f6973f332f27581371efaf303fd6c272cc43c2057b37aa99e3643158c7e4b2626549555d88626e99ea9e046f82f32e41bbde5f1508547e9a11b149b52387c
+  languageName: node
+  linkType: hard
+
+"phone@npm:^3.1.41":
+  version: 3.1.41
+  resolution: "phone@npm:3.1.41"
+  checksum: abd960ba35f24626e0f7969a0293dbaf814c3e5187d82fc29f8b7cb901c2e8f1924b2e39cd46dae04ecea52a532431618ec0d7fbd1acc73a374f7e32db8b5bc3
   languageName: node
   linkType: hard
 
