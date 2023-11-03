@@ -125,7 +125,13 @@ function CustomerType({ id }) {
 				<div className="card-actions justify-end">
 					<button
 						disabled={isMutationPending}
-						onClick={() => mutate(type)}
+						onClick={() => {
+							if (!type) {
+								toast("Select customer type to update");
+								return;
+							}
+							mutate(type);
+						}}
 						className="btn btn-sm btn-outline btn-primary"
 					>
 						Update
