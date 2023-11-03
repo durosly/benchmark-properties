@@ -7,6 +7,11 @@ const customerSchema = new mongoose.Schema({
 	name: String,
 	email: String,
 	phone: String,
+	type: {
+		type: String,
+		enum: ["enquiry", "retal", "purchase"],
+		default: "enquiry",
+	},
 	createdAt: { type: Date, default: Date.now },
 });
 
