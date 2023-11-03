@@ -1,56 +1,15 @@
-import { FiMail, FiPhone, FiKey, FiHome, FiTrash } from "react-icons/fi";
 import Link from "next/link";
+import { FiTrash } from "react-icons/fi";
+import CustomerType from "./__components/customer-type";
+import UserInfo from "./__components/user-info";
 
-function AdminCustomerDetailsPage() {
+function AdminCustomerDetailsPage({ params: { id } }) {
 	return (
 		<>
-			<div className="mb-5">
-				<h2 className="text-2xl font-bold">John Doe</h2>
-			</div>
-			<div className="card bg-base-100 mb-5">
-				<div className="card-body">
-					<h2 className="card-title">Details</h2>
-					<ul className="space-y-2">
-						<li className="flex items-center gap-2">
-							<FiMail className="w-5 h-5" />
-							<a href="mailto:slyboydon1@gmail.com">
-								slyboydon1@gmail.com
-							</a>
-						</li>
-						<li className="flex items-center gap-2">
-							<FiPhone className="w-5 h-5" />
-							<a href="tel:+2347063069903">+2347063069903</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<UserInfo id={id} />
 
 			<div className="flex flex-wrap gap-5 mb-5">
-				<div className="flex-1 card bg-base-100">
-					<div className="card-body">
-						<h2 className="card-title">Type</h2>
-						<p className="space-x-2">
-							<span>Current:</span>
-							<span className="font-bold">Rental</span>
-						</p>
-
-						<div className="flex gap-5">
-							<button className="flex gap-2 items-center bg-primary bg-opacity-10 hover:bg-opacity-25 py-3 px-4 rounded-2xl">
-								<FiKey />
-								<span>Retal</span>
-							</button>
-							<button className="flex gap-2 items-center bg-primary bg-opacity-10 hover:bg-opacity-25 py-3 px-4 rounded-2xl">
-								<FiHome />
-								<span>Purchase</span>
-							</button>
-						</div>
-						<div className="card-actions justify-end">
-							<button className="btn btn-outline btn-primary">
-								Update
-							</button>
-						</div>
-					</div>
-				</div>
+				<CustomerType id={id} />
 				<div className="flex-1 card bg-base-100">
 					<div className="card-body">
 						<h2 className="card-title">Apartments</h2>
