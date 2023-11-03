@@ -1,3 +1,4 @@
+import DeleteCustomer from "../__components/delete-customer";
 import CustomerActivities from "./__components/customer-activities";
 import CustomerApartments from "./__components/customer-apartments";
 import CustomerType from "./__components/customer-type";
@@ -15,7 +16,7 @@ function AdminCustomerDetailsPage({ params: { id } }) {
 
 			<CustomerActivities id={id} />
 
-			<button className="btn btn-error btn-block">Destroy</button>
+			<DeleteCustomer id={id} />
 		</>
 	);
 }
