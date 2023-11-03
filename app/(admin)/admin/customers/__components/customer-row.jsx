@@ -3,7 +3,6 @@ import Link from "next/link";
 import { DateTime } from "luxon";
 
 function CustomerRow({ item }) {
-	console.log(item);
 	const { name, createdAt, email, phone, _id } = item;
 	return (
 		<tr>

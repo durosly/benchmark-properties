@@ -109,7 +109,7 @@ function CustomersDisplay() {
 											<span> Loading...</span>
 										</td>
 									</tr>
-								) : null}{" "}
+								) : null}
 							</tbody>
 							{/* foot */}
 							<tfoot>
