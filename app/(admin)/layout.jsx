@@ -12,6 +12,7 @@ import {
 	FiSettings,
 	FiPhone,
 	FiLogOut,
+	FiX,
 } from "react-icons/fi";
 import { NavigationEvents } from "../(public)/components/navigation-event";
 import SignoutButton from "../(public)/components/signout-btn";
@@ -86,7 +87,16 @@ function AdminLayout({ children }) {
 					aria-label="close sidebar"
 					className="drawer-overlay"
 				></label>
-				<div className="p-4 w-80 min-h-full bg-base-100 text-base-content">
+				<div className="p-4 w-full min-[350px]:w-80 min-h-full bg-base-100 text-base-content">
+					<div className="text-right min-[350px]:hidden">
+						<label
+							htmlFor="my-drawer-3"
+							aria-label="close sidebar"
+							className="btn btn-xs btn-square"
+						>
+							<FiX className="w-5 h-5" />
+						</label>
+					</div>
 					<div className="relative h-14 mb-5">
 						<Image
 							src={logoImg}
