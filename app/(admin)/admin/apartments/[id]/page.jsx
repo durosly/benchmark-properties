@@ -1,4 +1,18 @@
+import {
+	FiDollarSign,
+	FiMapPin,
+	FiCheckCircle,
+	FiTrash2,
+	FiX,
+	FiSearch,
+} from "react-icons/fi";
+import { BiBath } from "react-icons/bi";
+import { LuBedSingle } from "react-icons/lu";
+import { MdOutlineOtherHouses } from "react-icons/md";
+import Image from "next/image";
+
 function ApartmentDetailsPage() {
+	let status = "hidden";
 	return (
 		<>
 			<div className="mb-5">
@@ -6,6 +20,210 @@ function ApartmentDetailsPage() {
 					Apartments/Properties title
 				</h2>
 			</div>
+
+			<div className="flex flex-wrap gap-5 mb-5">
+				<div className="card bg-base-100 flex-1">
+					<div className="card-body">
+						<h2 className="card-title">Info</h2>
+						<ul className="flex flex-wrap gap-2">
+							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
+								<FiDollarSign />
+								<span>2,000,000</span>
+							</li>
+							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
+								<BiBath />
+								<span>3</span>
+							</li>
+							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
+								<LuBedSingle />
+								<span>1</span>
+							</li>
+							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
+								<MdOutlineOtherHouses />
+								<span>5 (sqft)</span>
+							</li>
+							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
+								<FiMapPin />
+								<span>Deco road</span>
+							</li>
+						</ul>
+						<div className="card-actions">
+							<button className="btn-primary btn">
+								Update info
+							</button>
+						</div>
+					</div>
+				</div>
+				<div className="card bg-base-100 flex-1">
+					<div className="card-body">
+						<h2 className="card-title">Status</h2>
+						<span
+							className={`badge badge-md ${
+								status === "hidden"
+									? "badge-error"
+									: status === "unavailable"
+									? "badge-warning"
+									: "badge-success"
+							}`}
+						>
+							{status}
+						</span>
+						<div className="divider"></div>
+						<form action="/nice">
+							<div className="form-control mb-3">
+								<select
+									name="status"
+									id="status"
+									className="select select-bordered"
+								>
+									<option value="hidden">Hidden</option>
+									<option value="unavailable">
+										Unavailable
+									</option>
+									<option value="available">Available</option>
+								</select>
+							</div>
+							<button className="btn btn-primary">
+								Update status
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div className="card bg-base-100 mb-5">
+				<div className="card-body">
+					<h2 className="card-title">Description</h2>
+					<form action="/nice">
+						<div className="form-control mb-3">
+							<textarea
+								name="description"
+								id="description"
+								rows="5"
+								className="textarea textarea-bordered"
+							></textarea>
+						</div>
+						<button className="btn btn-primary">Save</button>
+					</form>
+				</div>
+			</div>
+
+			<div className="card bg-base-100 mb-5">
+				<div className="card-body">
+					<h2 className="card-title">Features</h2>
+					<form
+						action="/nice"
+						className="sm:flex gap-3"
+					>
+						<div className="form-control flex-1 max-sm:mb-3">
+							<input
+								type="text"
+								className="input input-bordered"
+							/>
+						</div>
+						<button className="btn btn-primary">Add</button>
+					</form>
+					<ul>
+						<li className="flex gap-2 items-center">
+							<FiCheckCircle className="stroke-success" />
+							<span>Bathroom is nice</span>
+
+							<button className="btn btn-sm btn-square btn-error">
+								<FiTrash2 />
+							</button>
+						</li>
+					</ul>
+					<div className="card-actions">
+						<button className="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+
+			<div className="card bg-base-100 mb-5">
+				<div className="card-body">
+					<h2 className="card-title">Images</h2>
+					<div className="flex gap-5 overflow-x-auto">
+						{Array(7)
+							.fill(4)
+							.map((_, i) => (
+								<div
+									key={i}
+									className=" h-20 w-20 flex-shrink-0 relative rounded-box overflow-hidden"
+								>
+									<button className="absolute top-2 right-2 z-10 btn btn-xs btn-error btn-square">
+										<FiX />
+									</button>
+									<Image
+										src={
+											"https://images.pexels.com/photos/7045712/pexels-photo-7045712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+										}
+										fill
+										alt="room title"
+										className="object-cover"
+									/>
+								</div>
+							))}
+					</div>
+					<div className="card-actions">
+						<button className="btn btn-primary">Upload</button>
+					</div>
+				</div>
+			</div>
+			<div className="card bg-base-100 mb-5">
+				<div className="card-body">
+					<h2 className="card-title">Video</h2>
+					<div className="relative">
+						<video
+							className="w-full sm:max-w-sm"
+							controls
+							src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+						></video>
+					</div>
+					<div className="card-actions">
+						<button className="btn btn-primary">Upload</button>
+					</div>
+				</div>
+			</div>
+
+			<div className="card bg-base-100 mb-5">
+				<div className="card-body">
+					<h2 className="card-title">Owners/Occupants</h2>
+					<form
+						action="/nice"
+						className="relative"
+					>
+						<div className="form-control relative">
+							<input
+								type="text"
+								className="input input-bordered pl-12"
+							/>
+							<FiSearch className="w-5 h-5 absolute top-1/2 -translate-y-1/2 left-4 pointer-events-none" />
+						</div>
+
+						{/* dropdown suggestion */}
+						{/* <ul className="absolute shadow-md rounded-md bottom-0 left-0 translate-y-full bg-base-100 p-3 w-full space-y-2">
+							<li className="hover:bg-base-200">Nice</li>
+							<li className="hover:bg-base-200">Nice</li>
+							<li className="hover:bg-base-200">Nice</li>
+						</ul> */}
+					</form>
+					<ul>
+						<li className="flex gap-2 items-center">
+							<FiCheckCircle className="stroke-success" />
+							<span>Bathroom is nice</span>
+
+							<button className="btn btn-sm btn-square btn-error">
+								<FiTrash2 />
+							</button>
+						</li>
+					</ul>
+					<div className="card-actions">
+						<button className="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+
+			<button className="btn btn-error btn-block">Destroy</button>
 		</>
 	);
 }
