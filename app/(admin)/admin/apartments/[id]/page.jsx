@@ -3,6 +3,7 @@ import { FiCheckCircle, FiSearch, FiTrash2, FiX } from "react-icons/fi";
 import ApartmentInfo from "./__components/apartment-info";
 import ApartmentStatus from "./__components/apartment-status";
 import ApartmentDescription from "./__components/apartment-desc";
+import ApartmentFeatures from "./__components/apartment-features";
 
 function ApartmentDetailsPage({ params: { id } }) {
 	let status = "hidden";
@@ -21,36 +22,7 @@ function ApartmentDetailsPage({ params: { id } }) {
 
 			<ApartmentDescription id={id} />
 
-			<div className="card bg-base-100 mb-5">
-				<div className="card-body">
-					<h2 className="card-title">Features</h2>
-					<form
-						action="/nice"
-						className="sm:flex gap-3"
-					>
-						<div className="form-control flex-1 max-sm:mb-3">
-							<input
-								type="text"
-								className="input input-bordered"
-							/>
-						</div>
-						<button className="btn btn-primary">Add</button>
-					</form>
-					<ul>
-						<li className="flex gap-2 items-center">
-							<FiCheckCircle className="stroke-success" />
-							<span>Bathroom is nice</span>
-
-							<button className="btn btn-sm btn-square btn-error">
-								<FiTrash2 />
-							</button>
-						</li>
-					</ul>
-					<div className="card-actions">
-						<button className="btn btn-primary">Save</button>
-					</div>
-				</div>
-			</div>
+			<ApartmentFeatures id={id} />
 
 			<div className="card bg-base-100 mb-5">
 				<div className="card-body">
