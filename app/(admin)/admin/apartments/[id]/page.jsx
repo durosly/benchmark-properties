@@ -1,17 +1,8 @@
-import {
-	FiDollarSign,
-	FiMapPin,
-	FiCheckCircle,
-	FiTrash2,
-	FiX,
-	FiSearch,
-} from "react-icons/fi";
-import { BiBath } from "react-icons/bi";
-import { LuBedSingle } from "react-icons/lu";
-import { MdOutlineOtherHouses } from "react-icons/md";
 import Image from "next/image";
+import { FiCheckCircle, FiSearch, FiTrash2, FiX } from "react-icons/fi";
+import ApartmentInfo from "./__components/apartment-info";
 
-function ApartmentDetailsPage() {
+function ApartmentDetailsPage({ params: { id } }) {
 	let status = "hidden";
 	return (
 		<>
@@ -22,38 +13,7 @@ function ApartmentDetailsPage() {
 			</div>
 
 			<div className="flex flex-wrap gap-5 mb-5">
-				<div className="card bg-base-100 flex-1">
-					<div className="card-body">
-						<h2 className="card-title">Info</h2>
-						<ul className="flex flex-wrap gap-2">
-							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
-								<FiDollarSign />
-								<span>2,000,000</span>
-							</li>
-							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
-								<BiBath />
-								<span>3</span>
-							</li>
-							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
-								<LuBedSingle />
-								<span>1</span>
-							</li>
-							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
-								<MdOutlineOtherHouses />
-								<span>5 (sqft)</span>
-							</li>
-							<li className="flex items-center gap-2 w-[calc((100%_-_0.5rem)_/_2)]">
-								<FiMapPin />
-								<span>Deco road</span>
-							</li>
-						</ul>
-						<div className="card-actions">
-							<button className="btn-primary btn">
-								Update info
-							</button>
-						</div>
-					</div>
-				</div>
+				<ApartmentInfo id={id} />
 				<div className="card bg-base-100 flex-1">
 					<div className="card-body">
 						<h2 className="card-title">Status</h2>
