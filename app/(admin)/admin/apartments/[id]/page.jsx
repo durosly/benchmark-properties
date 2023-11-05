@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FiCheckCircle, FiSearch, FiTrash2, FiX } from "react-icons/fi";
 import ApartmentInfo from "./__components/apartment-info";
 import ApartmentStatus from "./__components/apartment-status";
+import ApartmentDescription from "./__components/apartment-desc";
 
 function ApartmentDetailsPage({ params: { id } }) {
 	let status = "hidden";
@@ -18,22 +19,7 @@ function ApartmentDetailsPage({ params: { id } }) {
 				<ApartmentStatus id={id} />
 			</div>
 
-			<div className="card bg-base-100 mb-5">
-				<div className="card-body">
-					<h2 className="card-title">Description</h2>
-					<form action="/nice">
-						<div className="form-control mb-3">
-							<textarea
-								name="description"
-								id="description"
-								rows="5"
-								className="textarea textarea-bordered"
-							></textarea>
-						</div>
-						<button className="btn btn-primary">Save</button>
-					</form>
-				</div>
-			</div>
+			<ApartmentDescription id={id} />
 
 			<div className="card bg-base-100 mb-5">
 				<div className="card-body">

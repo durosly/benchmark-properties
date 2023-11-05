@@ -53,6 +53,13 @@ const ApartmentUpdateStatusValidationSchema = z.object({
 		message: "Invalid status option",
 	}),
 });
+const ApartmentUpdateDescriptionValidationSchema = z.object({
+	description: z
+		.string({
+			message: "Description cannot be empty",
+		})
+		.min(300, { message: "Description is too short. min 300 chars" }),
+});
 const ApartmentUpdateTypeValidationSchema = z.object({
 	type: z.enum(["rental", "sale"]),
 });
@@ -66,6 +73,7 @@ export {
 	ApartmentUpdateInfoValidationSchema,
 	ApartmentUpdateTypeValidationSchema,
 	ApartmentUpdateStatusValidationSchema,
+	ApartmentUpdateDescriptionValidationSchema,
 };
 
 const ApartmentModel =
