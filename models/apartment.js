@@ -37,17 +37,30 @@ apartmentSchema.index({
 // customerSchema.index({ email: "text" });
 // customerSchema.index({ phone: "text" });
 
-const ApartmentValidationSchema = z.object({
-	title: z.string().min(3),
+const ApartmentUpdateInfoValidationSchema = z.object({
 	price: z.coerce.number({ message: "Enter number" }).gt(0),
 	location: z.string().min(3),
 	space: z.coerce.number().gt(0),
 	baths: z.coerce.number().gt(0),
 	beds: z.coerce.number().gt(0),
+});
+
+const ApartmentUpdateTitleValidationSchema = z.object({
+	title: z.string().min(3),
+});
+const ApartmentUpdateTypeValidationSchema = z.object({
 	type: z.enum(["rental", "sale"]),
 });
 
-export { ApartmentValidationSchema };
+const ApartmentValidationSchema = ApartmentUpdateInfoValidationSchema.merge(
+	ApartmentUpdateTitleValidationSchema
+).merge(ApartmentUpdateTypeValidationSchema);
+
+export {
+	ApartmentValidationSchema,
+	ApartmentUpdateInfoValidationSchema,
+	ApartmentUpdateTypeValidationSchema,
+};
 
 const ApartmentModel =
 	mongoose.models.Apartment || mongoose.model("Apartment", apartmentSchema);
