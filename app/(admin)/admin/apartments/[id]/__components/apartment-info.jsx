@@ -67,7 +67,7 @@ function ApartmentInfo({ id }) {
 	if (isError) {
 		return (
 			<>
-				<div className="card bg-base-100 mb-5 flex-1">
+				<div className="card bg-base-100 flex-1">
 					<div className="card-body">
 						<h2 className="card-title">Info</h2>
 
@@ -116,7 +116,7 @@ function ApartmentInfo({ id }) {
 								<span>{commaNumber(space)} (sqft)</span>
 							)}
 						</li>
-						<li className="flex items-center gap-2">
+						<li className="flex items-center gap-2 w-full">
 							<FiMapPin />
 							{isPending ? (
 								<Skeleton containerClassName="flex-1" />

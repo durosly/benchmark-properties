@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FiCheckCircle, FiSearch, FiTrash2, FiX } from "react-icons/fi";
 import ApartmentInfo from "./__components/apartment-info";
+import ApartmentStatus from "./__components/apartment-status";
 
 function ApartmentDetailsPage({ params: { id } }) {
 	let status = "hidden";
@@ -14,41 +15,7 @@ function ApartmentDetailsPage({ params: { id } }) {
 
 			<div className="flex flex-wrap gap-5 mb-5">
 				<ApartmentInfo id={id} />
-				<div className="card bg-base-100 flex-1">
-					<div className="card-body">
-						<h2 className="card-title">Status</h2>
-						<span
-							className={`badge badge-md ${
-								status === "hidden"
-									? "badge-error"
-									: status === "unavailable"
-									? "badge-warning"
-									: "badge-success"
-							}`}
-						>
-							{status}
-						</span>
-						<div className="divider"></div>
-						<form action="/nice">
-							<div className="form-control mb-3">
-								<select
-									name="status"
-									id="status"
-									className="select select-bordered"
-								>
-									<option value="hidden">Hidden</option>
-									<option value="unavailable">
-										Unavailable
-									</option>
-									<option value="available">Available</option>
-								</select>
-							</div>
-							<button className="btn btn-primary">
-								Update status
-							</button>
-						</form>
-					</div>
-				</div>
+				<ApartmentStatus id={id} />
 			</div>
 
 			<div className="card bg-base-100 mb-5">
