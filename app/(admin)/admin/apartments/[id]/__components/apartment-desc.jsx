@@ -114,7 +114,10 @@ function ApartmentDescription({ id }) {
 					<>
 						<pre className="overflow-x-auto whitespace-pre-wrap break-words font-roboto">
 							{isPending ? (
-								<Skeleton containerClassName="h-20" />
+								<Skeleton
+									count={5}
+									containerClassName="h-20"
+								/>
 							) : (
 								dbDescription ||
 								"**No description specified yet**"
