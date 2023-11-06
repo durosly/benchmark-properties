@@ -53,6 +53,11 @@ const ApartmentUpdateFeaturesValidationSchema = z.object({
 		.array(z.string())
 		.nonempty({ message: "Features cannot be empty" }),
 });
+const ApartmentUpdateImagessValidationSchema = z.object({
+	images: z
+		.array(z.string())
+		.nonempty({ message: "Features cannot be empty" }),
+});
 const ApartmentUpdateStatusValidationSchema = z.object({
 	status: z.enum(["available", "unavailable", "hidden"], {
 		message: "Invalid status option",
@@ -80,6 +85,7 @@ export {
 	ApartmentUpdateStatusValidationSchema,
 	ApartmentUpdateDescriptionValidationSchema,
 	ApartmentUpdateFeaturesValidationSchema,
+	ApartmentUpdateImagessValidationSchema,
 };
 
 const ApartmentModel =
