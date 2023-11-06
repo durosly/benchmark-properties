@@ -90,7 +90,7 @@ function ApartmentImages({ id }) {
 											<FiX />
 										</button>
 										<Image
-											src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}${img}`}
+											src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${img}`}
 											fill
 											alt="room title"
 											className="object-cover"
