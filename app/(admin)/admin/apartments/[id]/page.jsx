@@ -5,6 +5,7 @@ import ApartmentStatus from "./__components/apartment-status";
 import ApartmentDescription from "./__components/apartment-desc";
 import ApartmentFeatures from "./__components/apartment-features";
 import ApartmentImages from "./__components/apartment-images";
+import ApartmentVideo from "./__components/apartment-video";
 
 function ApartmentDetailsPage({ params: { id } }) {
 	let status = "hidden";
@@ -27,21 +28,7 @@ function ApartmentDetailsPage({ params: { id } }) {
 
 			<ApartmentImages id={id} />
 
-			<div className="card bg-base-100 mb-5">
-				<div className="card-body">
-					<h2 className="card-title">Video</h2>
-					<div className="relative">
-						<video
-							className="w-full sm:max-w-sm"
-							controls
-							src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-						></video>
-					</div>
-					<div className="card-actions">
-						<button className="btn btn-primary">Upload</button>
-					</div>
-				</div>
-			</div>
+			<ApartmentVideo id={id} />
 
 			<div className="card bg-base-100 mb-5">
 				<div className="card-body">
