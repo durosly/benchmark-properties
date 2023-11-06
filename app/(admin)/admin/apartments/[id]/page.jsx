@@ -4,6 +4,7 @@ import ApartmentInfo from "./__components/apartment-info";
 import ApartmentStatus from "./__components/apartment-status";
 import ApartmentDescription from "./__components/apartment-desc";
 import ApartmentFeatures from "./__components/apartment-features";
+import ApartmentImages from "./__components/apartment-images";
 
 function ApartmentDetailsPage({ params: { id } }) {
 	let status = "hidden";
@@ -24,36 +25,8 @@ function ApartmentDetailsPage({ params: { id } }) {
 
 			<ApartmentFeatures id={id} />
 
-			<div className="card bg-base-100 mb-5">
-				<div className="card-body">
-					<h2 className="card-title">Images</h2>
-					<div className="flex gap-5 overflow-x-auto">
-						{Array(7)
-							.fill(4)
-							.map((_, i) => (
-								<div
-									key={i}
-									className=" h-20 w-20 flex-shrink-0 relative rounded-box overflow-hidden"
-								>
-									<button className="absolute top-2 right-2 z-10 btn btn-xs btn-error btn-square">
-										<FiX />
-									</button>
-									<Image
-										src={
-											"https://images.pexels.com/photos/7045712/pexels-photo-7045712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-										}
-										fill
-										alt="room title"
-										className="object-cover"
-									/>
-								</div>
-							))}
-					</div>
-					<div className="card-actions">
-						<button className="btn btn-primary">Upload</button>
-					</div>
-				</div>
-			</div>
+			<ApartmentImages id={id} />
+
 			<div className="card bg-base-100 mb-5">
 				<div className="card-body">
 					<h2 className="card-title">Video</h2>
