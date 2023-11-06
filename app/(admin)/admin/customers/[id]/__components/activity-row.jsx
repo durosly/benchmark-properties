@@ -6,7 +6,7 @@ import axios from "axios";
 import { DateTime } from "luxon";
 import { useRef } from "react";
 import { FiTrash2 } from "react-icons/fi";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 
 function ActivityRow({ count, activity, id }) {
 	let toastId = useRef(null);

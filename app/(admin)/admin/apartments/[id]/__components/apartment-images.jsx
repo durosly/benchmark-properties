@@ -9,7 +9,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import { handleClientError } from "@/lib/utils";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 import { queryClient } from "@/app/(public)/components/client-wrapper";
 import Empty from "@/app/(public)/components/empty";
 

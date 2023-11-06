@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { handleClientError } from "@/lib/utils";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 
 function LoginForm() {
 	const router = useRouter();

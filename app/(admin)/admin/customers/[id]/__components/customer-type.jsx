@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import { FiHome, FiKey } from "react-icons/fi";
 import { VscQuestion } from "react-icons/vsc";
 import Skeleton from "react-loading-skeleton";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 
 function CustomerType({ id }) {
 	let [type, setType] = useState("");

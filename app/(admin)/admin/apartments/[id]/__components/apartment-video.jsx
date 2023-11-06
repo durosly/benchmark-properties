@@ -9,7 +9,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import { queryClient } from "@/app/(public)/components/client-wrapper";
 import { handleClientError } from "@/lib/utils";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 
 function ApartmentVideo({ id }) {
 	const { isPending, isError, data, error } = useQuery({

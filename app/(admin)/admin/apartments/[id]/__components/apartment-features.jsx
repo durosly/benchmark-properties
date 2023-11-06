@@ -8,7 +8,7 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { FiCheckCircle, FiTrash2 } from "react-icons/fi";
 import Skeleton from "react-loading-skeleton";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 
 function ApartmentFeatures({ id }) {
 	const [edit, setEdit] = useState(false);

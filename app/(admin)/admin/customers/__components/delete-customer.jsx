@@ -4,7 +4,7 @@ import { handleClientError } from "@/lib/utils";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useRef } from "react";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 function DeleteCustomer({ id }) {

@@ -1,7 +1,7 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import "react-loading-skeleton/dist/skeleton.css";
-import { Toaster } from "sonner";
+import { Toaster } from "react-hot-toast";
 import ClientWrapper from "./(public)/components/client-wrapper";
 
 const roboto = Roboto({
@@ -19,10 +19,8 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={`${roboto.variable}`}>
-				<ClientWrapper>
-					{children}
-					<Toaster richColors />
-				</ClientWrapper>
+				<ClientWrapper>{children}</ClientWrapper>
+				<Toaster />
 			</body>
 		</html>
 	);

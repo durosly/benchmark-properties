@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 import axios from "axios";
 import { handleClientError } from "@/lib/utils";
 import { queryClient } from "@/app/(public)/components/client-wrapper";

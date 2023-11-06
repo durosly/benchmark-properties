@@ -10,7 +10,7 @@ import { FiMapPin } from "react-icons/fi";
 import { LuBedSingle } from "react-icons/lu";
 import { MdOutlineOtherHouses } from "react-icons/md";
 import Skeleton from "react-loading-skeleton";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 
 function ApartmentInfo({ id }) {
 	const [property, setProperty] = useState({

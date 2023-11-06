@@ -3,7 +3,7 @@ import { queryClient } from "@/app/(public)/components/client-wrapper";
 import { handleClientError } from "@/lib/utils";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 import Skeleton from "react-loading-skeleton";
 import { useState } from "react";
 import { useEffect, useRef } from "react";
