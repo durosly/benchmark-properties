@@ -8,15 +8,12 @@ import ApartmentImages from "./__components/apartment-images";
 import ApartmentVideo from "./__components/apartment-video";
 import ApartmentOccupant from "./__components/apartment-occupant";
 import ApartmentDestroyBtn from "./__components/apartment-destroy";
+import ApartmentTitle from "./__components/apartment-title";
 
 function ApartmentDetailsPage({ params: { id } }) {
 	return (
 		<>
-			<div className="mb-5">
-				<h2 className="text-2xl font-bold">
-					Apartments/Properties title
-				</h2>
-			</div>
+			<ApartmentTitle id={id} />
 
 			<div className="flex flex-wrap gap-5 mb-5">
 				<ApartmentInfo id={id} />
