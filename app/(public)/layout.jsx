@@ -57,6 +57,7 @@ export default function PublicLayout({ children }) {
 									fill
 									priority={true}
 									placeholder="blur"
+									sizes="(min-width: 360px) 288px, calc(100vw - 32px)"
 								/>
 							</div>
 						</div>

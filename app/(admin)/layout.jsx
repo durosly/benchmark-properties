@@ -103,6 +103,7 @@ function AdminLayout({ children }) {
 							fill
 							alt=""
 							className="object-contain"
+							sizes="(min-width: 360px) 288px, calc(100vw - 32px)"
 						/>
 					</div>
 					<ul className="menu menu-sm lg:menu-md">
