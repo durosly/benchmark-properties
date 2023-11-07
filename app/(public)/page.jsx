@@ -1,11 +1,11 @@
-import { FiMapPin, FiSearch, FiMap, FiWifi, FiUnlock } from "react-icons/fi";
-import { BsHouse } from "react-icons/bs";
 import frontApartment from "@/public/images/front-apartment.png";
-import studyArea from "@/public/images/study-area.png";
-import livingArea from "@/public/images/living-area.png";
 import kitchen from "@/public/images/kitchen.jpg";
+import livingArea from "@/public/images/living-area.png";
+import studyArea from "@/public/images/study-area.png";
 import Image from "next/image";
 import Link from "next/link";
+import { FiMap, FiUnlock, FiWifi } from "react-icons/fi";
+import SearchApartmentForm from "./components/search-apartment-form";
 
 function Home() {
 	return (
@@ -37,74 +37,7 @@ function Home() {
 							className="corner absolute bottom-0 -right-[var(--size)] -rotate-90"
 						></div>
 					</div>
-					<form
-						action=""
-						className="bg-white rounded-tr-xl py-5 px-10 flex flex-wrap items-end gap-5"
-					>
-						<div className="form-control flex-1">
-							<label
-								className="label justify-start gap-2"
-								htmlFor="location"
-							>
-								<FiMapPin className="w-5 h-5" />
-								<span>Location</span>
-							</label>
-							<select
-								name="location"
-								id="location"
-								className="select select-bordered"
-							>
-								<option value="">-- select location --</option>
-								<option value="warri">Warri</option>
-								<option value="abuja">Abuja</option>
-								<option value="port">Port Harcourt</option>
-							</select>
-						</div>
-						<div className="form-control flex-1">
-							<label
-								className="label justify-start gap-2"
-								htmlFor="property"
-							>
-								<BsHouse className="w-5 h-5" />
-								<span>Property Type</span>
-							</label>
-							<select
-								name="property"
-								id="property"
-								className="select select-bordered"
-							>
-								<option value="">-- select property --</option>
-								<option value="warri">Warri</option>
-								<option value="abuja">Abuja</option>
-								<option value="port">Port Harcourt</option>
-							</select>
-						</div>
-						<div className="form-control flex-1">
-							<label
-								className="label justify-start gap-2"
-								htmlFor="price"
-							>
-								<span className="text-xl ">&#8358;</span>
-								<span>Price Range</span>
-							</label>
-							<select
-								name="price"
-								id="price"
-								className="select select-bordered"
-							>
-								<option value="">-- select price --</option>
-								<option value="warri">Warri</option>
-								<option value="abuja">Abuja</option>
-								<option value="port">Port Harcourt</option>
-							</select>
-						</div>
-						<div>
-							<button className="btn btn-primary">
-								<FiSearch />
-								Search
-							</button>
-						</div>
-					</form>
+					<SearchApartmentForm />
 					<div
 						style={{
 							"--size": "15px",
