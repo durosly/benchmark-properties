@@ -15,17 +15,18 @@ import {
 	WhatsappShareButton,
 } from "react-share";
 
-function ShareBtn() {
+function ShareBtn({ title, description }) {
 	const pathname = usePathname();
+
 	const data = {
-		url: `https://www.nice.com${pathname}`,
-		title: "Room title",
-		text: "room description summary",
+		url: `${process.env.NEXT_PUBLIC_URL}${pathname}`,
+		title,
+		text: description.substring(0, 300),
 	};
 	async function handleClick() {
 		if (typeof window !== "undefined") {
 			if (!navigator.share || !navigator.canShare(data) || !isMobile) {
-				document.getElementById("my_modal_2").showModal();
+				document.getElementById("share-modal").showModal();
 			} else {
 				await navigator.share(data);
 			}
@@ -43,7 +44,7 @@ function ShareBtn() {
 			{/* Open the modal using document.getElementById('ID').showModal() method */}
 
 			<dialog
-				id="my_modal_2"
+				id="share-modal"
 				className="modal"
 			>
 				<div className="modal-box">
