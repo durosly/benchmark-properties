@@ -1,14 +1,14 @@
 "use client";
 
-import { FiCheckCircle, FiTrash2 } from "react-icons/fi";
 import { queryClient } from "@/app/(public)/components/client-wrapper";
 import Empty from "@/app/(public)/components/empty";
 import { handleClientError } from "@/lib/utils";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useRef, useState } from "react";
-import Skeleton from "react-loading-skeleton";
+import { useRef } from "react";
 import toast from "react-hot-toast";
+import { FiCheckCircle, FiTrash2 } from "react-icons/fi";
+import Skeleton from "react-loading-skeleton";
 
 function ApartmentOccupantDisplay({ id }) {
 	const { isPending, isError, data, error } = useQuery({
