@@ -4,21 +4,16 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import commaNumber from "comma-number";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { BiBath } from "react-icons/bi";
 import { BsHouse } from "react-icons/bs";
-import {
-	FiChevronLeft,
-	FiChevronRight,
-	FiMapPin,
-	FiSearch,
-} from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight, FiMapPin } from "react-icons/fi";
 import { LuBedSingle } from "react-icons/lu";
 import { MdOutlineOtherHouses } from "react-icons/md";
 import Skeleton from "react-loading-skeleton";
 import Empty from "../../components/empty";
 import ImageSliderContainer from "./images";
-import { useSearchParams } from "next/navigation";
 
 function DisplayRooms() {
 	const searchParams = useSearchParams();
@@ -218,7 +213,12 @@ function DisplayRooms() {
 											containerClassName="absolute top-0 left-0 w-full h-full"
 											className="h-full w-full"
 										/>
-										<ImageSliderContainer />
+										<ImageSliderContainer
+											img={
+												apartment?.images[0] ??
+												"default"
+											}
+										/>
 									</div>
 									<div className="p-5 space-y-2 bg-white">
 										<h3 className="text-xl font-bold">
