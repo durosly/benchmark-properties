@@ -1,6 +1,7 @@
 import connectMongo from "@/lib/connectDB";
 import CustomerActivityModel from "@/models/activity";
 import CustomerModel from "@/models/customer";
+import TenantModel from "@/models/tenant";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
@@ -17,6 +18,7 @@ async function deleteCustomer(_, { params: { id } }) {
 
 		const customer = await CustomerModel.findByIdAndDelete(id);
 		await CustomerActivityModel.deleteMany({ userId: id });
+		await TenantModel.deleteMany({ customerId: id });
 
 		if (!customer) {
 			return NextResponse.json(

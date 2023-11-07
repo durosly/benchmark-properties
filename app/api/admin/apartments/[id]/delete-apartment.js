@@ -2,6 +2,8 @@ import connectMongo from "@/lib/connectDB";
 import ApartmentModel from "@/models/apartment";
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
+import TenantModel from "@/models/tenant";
+import cloudinary from "@/lib/cloudinary";
 
 async function deleteApartment(_, { params: { id } }) {
 	try {
@@ -21,6 +23,20 @@ async function deleteApartment(_, { params: { id } }) {
 				{ status: false, message: "No apartment found" },
 				{ status: 404 }
 			);
+		}
+
+		await TenantModel.deleteMany({ apartmentId: id });
+
+		apartment.images.map((img) => {
+			cloudinary.uploader.destroy(img);
+		});
+
+		const existingVideo = apartment.video;
+
+		if (existingVideo) {
+			await cloudinary.uploader.destroy(existingVideo, {
+				resource_type: "video",
+			});
 		}
 
 		return NextResponse.json({
