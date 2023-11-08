@@ -38,13 +38,13 @@ function AboutUsPage() {
 							</h2>
 						</div>
 						<p>
-							At Benchmark, we've set out to redefine the student
-							living experience. We believe that every student
-							deserves a comfortable, safe, and inspiring place to
-							call home while pursuing their educational dreams.
-							Our vision is to create vibrant and supportive
-							communities that foster personal and academic
-							growth, making your university years truly
+							At Benchmark, we&apos;ve set out to redefine the
+							student living experience. We believe that every
+							student deserves a comfortable, safe, and inspiring
+							place to call home while pursuing their educational
+							dreams. Our vision is to create vibrant and
+							supportive communities that foster personal and
+							academic growth, making your university years truly
 							memorable.
 						</p>
 					</div>
@@ -132,7 +132,7 @@ function AboutUsPage() {
 							Community Living
 						</h3>
 						<p>
-							We foster a sense of community. You'll have the
+							We foster a sense of community. You&apos;ll have the
 							opportunity to meet like-minded students, engage in
 							social activities, and build lasting friendships
 							that will enrich your college experience.
@@ -144,9 +144,9 @@ function AboutUsPage() {
 						</h3>
 						<p>
 							Our dedicated management team is always ready to
-							assist you. Whether it's a maintenance request, a
-							question, or guidance on local resources, we're here
-							to ensure your stay is hassle-free.
+							assist you. Whether it&apos;s a maintenance request,
+							a question, or guidance on local resources,
+							we&apos;re here to ensure your stay is hassle-free.
 						</p>
 					</div>
 					<div className="sm:w-[calc((100%_-_2.5rem)_/_2)] md:w-[calc((100%_-_2.5rem_*_2)_/_3)] text-center border py-10 px-10 rounded-2xl bg-primary/10 border-primary">

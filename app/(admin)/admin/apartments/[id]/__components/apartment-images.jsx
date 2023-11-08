@@ -124,7 +124,7 @@ function ApartmentImages({ id }) {
 	);
 }
 
-const UploadFileModal = memo(function ({ id }) {
+function UploadFileModal({ id }) {
 	const [files, setFiles] = useState([]);
 	const isRemoving = useRef(false);
 
@@ -159,7 +159,7 @@ const UploadFileModal = memo(function ({ id }) {
 			</form>
 		</dialog>
 	);
-});
+}
 
 function DropImageZone({ setFiles }) {
 	const onDrop = useCallback((acceptedFiles) => {
@@ -192,7 +192,7 @@ function DropImageZone({ setFiles }) {
 	);
 }
 
-const UploadFile = memo(function ({ file, id }) {
+function UploadFile({ file, id }) {
 	const initialized = useRef(false);
 
 	const [isUploading, setIsUploading] = useState(false);
@@ -298,6 +298,6 @@ const UploadFile = memo(function ({ file, id }) {
 			</div>
 		</li>
 	);
-});
+}
 
 export default memo(ApartmentImages);

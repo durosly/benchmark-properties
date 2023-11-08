@@ -242,8 +242,8 @@ function Home() {
 					</h2>
 					<p>
 						We invite you to explore our exceptional properties and
-						see for yourself how we're redefining the way students
-						live during their university years.
+						see for yourself how we&apos;re redefining the way
+						students live during their university years.
 					</p>
 				</div>
 				<div className="flex-1 h-80 md:h-auto bg-primary relative rounded-2xl overflow-hidden">
