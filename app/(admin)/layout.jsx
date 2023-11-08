@@ -152,12 +152,12 @@ function AdminLayout({ children }) {
 								<span>Settings</span>
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link href="/admin/contacts">
 								<FiPhone className="h-5 w-5" />
 								<span>Contacts</span>
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 					<div className="menu">
 						<SignoutButton className="btn btn-sm btn-error">
