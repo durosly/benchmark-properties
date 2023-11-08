@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import TenantModel from "@/models/tenant";
 import cloudinary from "@/lib/cloudinary";
+import EnquiryModel from "@/models/enquire";
 
 async function deleteApartment(_, { params: { id } }) {
 	try {
@@ -26,6 +27,7 @@ async function deleteApartment(_, { params: { id } }) {
 		}
 
 		await TenantModel.deleteMany({ apartmentId: id });
+		await EnquiryModel.deleteMany({ apartmentId: id });
 
 		apartment.images.map((img) => {
 			cloudinary.uploader.destroy(img);
