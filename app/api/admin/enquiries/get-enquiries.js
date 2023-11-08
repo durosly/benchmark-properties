@@ -1,5 +1,4 @@
 import connectMongo from "@/lib/connectDB";
-import CustomerModel from "@/models/customer";
 import EnquiryModel from "@/models/enquire";
 import { NextResponse } from "next/server";
 
