@@ -126,11 +126,7 @@ function ApartmentImages({ id }) {
 
 const UploadFileModal = memo(function ({ id }) {
 	const [files, setFiles] = useState([]);
-
-	function removeFile(position) {
-		const newList = files.splice(position, 1);
-		setFiles([...newList]);
-	}
+	const isRemoving = useRef(false);
 
 	return (
 		<dialog
@@ -148,7 +144,6 @@ const UploadFileModal = memo(function ({ id }) {
 								key={`${file.path}-${i}`}
 								file={file}
 								id={id}
-								removeFile={removeFile}
 								position={i}
 							/>
 						))}
@@ -197,7 +192,7 @@ function DropImageZone({ setFiles }) {
 	);
 }
 
-const UploadFile = memo(function ({ file, id, removeFile, position }) {
+const UploadFile = memo(function ({ file, id }) {
 	const initialized = useRef(false);
 
 	const [isUploading, setIsUploading] = useState(false);
@@ -260,12 +255,11 @@ const UploadFile = memo(function ({ file, id, removeFile, position }) {
 			);
 			if (!response?.data?.status) throw new Error("Saving to DB Error");
 
-			setTimeout(() => removeFile(position), 3000);
 			await queryClient.invalidateQueries({
 				queryKey: ["apartments"],
 			});
 
-			document.getElementById("upload-images").close();
+			// document.getElementById("upload-images").close();
 		} catch (error) {
 			const message = handleClientError(error);
 			setErrorMsg(message);
