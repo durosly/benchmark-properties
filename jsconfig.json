@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "paths": {
-     
       "@/*": ["./*"],
       "@/logos/*": ["./public/logos/*"],
       "@/lib/*": ["./lib/*"],
