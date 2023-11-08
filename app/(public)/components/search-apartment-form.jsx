@@ -37,11 +37,11 @@ function SearchApartmentForm() {
 					name="qb"
 					id="property"
 					className="select select-bordered"
+					defaultValue={""}
 				>
 					<option
 						value=""
 						disabled
-						selected
 					>
 						-- select property --
 					</option>
@@ -63,11 +63,11 @@ function SearchApartmentForm() {
 					name="qp"
 					id="price"
 					className="select select-bordered"
+					defaultValue={""}
 				>
 					<option
 						value=""
 						disabled
-						selected
 					>
 						-- select price --
 					</option>

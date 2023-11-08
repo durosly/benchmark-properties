@@ -6,11 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiMap, FiUnlock, FiWifi } from "react-icons/fi";
 import SearchApartmentForm from "./components/search-apartment-form";
+import FadeAnimation from "./components/fade-animation";
 
 function Home() {
 	return (
 		<>
-			<div className="min-h-[450px] pt-28 px-5 text-center md:text-left md:px-20 pb-10 md:pb-0 housing bg-cover bg-center rounded-2xl mt-10 mb-20">
+			<div className="min-h-[450px] pt-28 px-5 text-center md:text-left md:px-20 pb-10 md:pb-0 housing bg-fixed bg-cover bg-center rounded-2xl mt-10 mb-20">
 				<h2 className="text-6xl text-white font-bold font-roboto max-w-xl [font-size:clamp(2rem,8vw,3.75rem)]">
 					It&apos;s time to find a smart home
 				</h2>
@@ -57,126 +58,153 @@ function Home() {
 				</div>
 			</div>
 
-			<div className="flex justify-center flex-wrap gap-5 mb-20">
-				<div className="flex-[300px] flex-grow-0">
-					<FiMap className="w-8 h-8 mx-auto stroke-primary" />
-					<div className="text-center">
-						<h3 className="text-xl font-bold my-2	">
-							Transportation
-						</h3>
-						<p className="text-sm">
-							<span className="font-bold">
-								Quick, safe and reliable.
-							</span>{" "}
-							<span>
-								We provide transportation for students moving
-								from thier apartments to school
-							</span>
-						</p>
+			<FadeAnimation
+				down
+				cascade
+				duration={1000}
+			>
+				<div className="flex justify-center flex-wrap gap-5 mb-20">
+					<div className="flex-[300px] flex-grow-0">
+						<FiMap className="w-8 h-8 mx-auto stroke-primary" />
+						<div className="text-center">
+							<h3 className="text-xl font-bold my-2	">
+								Transportation
+							</h3>
+							<p className="text-sm">
+								<span className="font-bold">
+									Quick, safe and reliable.
+								</span>{" "}
+								<span>
+									We provide transportation for students
+									moving from thier apartments to school
+								</span>
+							</p>
+						</div>
+					</div>
+					<div className="flex-[300px] flex-grow-0">
+						<FiWifi className="w-8 h-8 mx-auto stroke-primary" />
+						<div className="text-center">
+							<h3 className="text-xl font-bold my-2	">
+								Unlimited Internet
+							</h3>
+							<p className="text-sm">
+								<span className="font-bold">
+									High speed over 10mb/s.
+								</span>{" "}
+								<span>
+									Internet is an essential tool to being a
+									student and we are no stranger to that
+								</span>
+							</p>
+						</div>
+					</div>
+					<div className="flex-[300px] flex-grow-0">
+						<FiUnlock className="w-8 h-8 mx-auto stroke-primary" />
+						<div className="text-center">
+							<h3 className="text-xl font-bold my-2	">Security</h3>
+							<p className="text-sm">
+								<span className="font-bold">
+									24/7 CCTV and security.
+								</span>{" "}
+								<span>
+									Safety of lives and properties is our
+									priority. We ensure to keep a tight belt on
+									this
+								</span>
+							</p>
+						</div>
 					</div>
 				</div>
-				<div className="flex-[300px] flex-grow-0">
-					<FiWifi className="w-8 h-8 mx-auto stroke-primary" />
-					<div className="text-center">
-						<h3 className="text-xl font-bold my-2	">
-							Unlimited Internet
-						</h3>
-						<p className="text-sm">
-							<span className="font-bold">
-								High speed over 10mb/s.
-							</span>{" "}
-							<span>
-								Internet is an essential tool to being a student
-								and we are no stranger to that
-							</span>
-						</p>
-					</div>
-				</div>
-				<div className="flex-[300px] flex-grow-0">
-					<FiUnlock className="w-8 h-8 mx-auto stroke-primary" />
-					<div className="text-center">
-						<h3 className="text-xl font-bold my-2	">Security</h3>
-						<p className="text-sm">
-							<span className="font-bold">
-								24/7 CCTV and security.
-							</span>{" "}
-							<span>
-								Safety of lives and properties is our priority.
-								We ensure to keep a tight belt on this
-							</span>
-						</p>
-					</div>
-				</div>
-			</div>
+			</FadeAnimation>
 
 			<div className="md:flex gap-10 mb-20">
-				<div className="relative w-full md:w-96 h-52 md:h-auto aspect-square rounded-2xl overflow-hidden">
-					<Image
-						src={frontApartment}
-						alt=""
-						fill
-						className="object-cover"
-					/>
-				</div>
+				<FadeAnimation left>
+					<div className="relative w-full md:w-96 h-52 md:h-auto aspect-square rounded-2xl overflow-hidden">
+						<Image
+							src={frontApartment}
+							alt=""
+							fill
+							className="object-cover"
+						/>
+					</div>
+				</FadeAnimation>
 				<div className="flex-1 space-y-4 mt-5 md:mt-0">
-					<h2 className="text-3xl font-semibold text-left">
-						Benchmark Studentpad
-					</h2>
-					<p>
-						We&apos;ve set out to redefine the student living
-						experience. We believe that every student deserves a
-						comfortable, safe, and inspiring place to call home
-						while pursuing their educational dreams.
-					</p>
-					<p>What Sets Us Apart:</p>
-					<ul className="pl-5 space-y-3">
-						<li>
-							<div className="flex gap-2 items-center">
-								<div className="inline-block w-2 h-2 rounded-full bg-primary"></div>
-								<h4 className="font-bold">
-									Tailored for Students
-								</h4>
-							</div>
-							<p className="pl-4">
-								We&apos;ve designed our accommodations
-								specifically for the needs of students. From
-								well-appointed private rooms to spacious common
-								areas, we provide a variety of options to suit
-								your preferences and budget.
-							</p>
-						</li>
-						<li>
-							<div className="flex gap-2 items-center">
-								<div className="inline-block w-2 h-2 rounded-full bg-primary"></div>
-								<h4 className="font-bold">
-									Safety and Security
-								</h4>
-							</div>
-							<p className="pl-4">
-								Your peace of mind is our top priority. Our
-								properties are equipped with state-of-the-art
-								security measures, including secure entry
-								systems and 24/7 surveillance, ensuring that you
-								feel safe at all times.
-							</p>
-						</li>
-						<li>
-							<div className="flex gap-2 items-center">
-								<div className="inline-block w-2 h-2 rounded-full bg-primary"></div>
-								<h4 className="font-bold">
-									Convenient Locations
-								</h4>
-							</div>
-							<p className="pl-4">
-								Our properties are strategically located near
-								major universities and colleges, making it easy
-								to get to your classes, libraries, and
-								extracurricular activities. We understand the
-								value of a convenient location in your academic
-								journey.
-							</p>
-						</li>
-					</ul>
+					<FadeAnimation
+						right
+						delay={200}
+					>
+						<h2 className="text-3xl font-semibold text-left">
+							Benchmark Studentpad
+						</h2>
+					</FadeAnimation>
+					<FadeAnimation
+						right
+						delay={500}
+					>
+						<p>
+							We&apos;ve set out to redefine the student living
+							experience. We believe that every student deserves a
+							comfortable, safe, and inspiring place to call home
+							while pursuing their educational dreams.
+						</p>
+					</FadeAnimation>
+					<FadeAnimation delay={600}>
+						<p>What Sets Us Apart:</p>
+					</FadeAnimation>
+					<FadeAnimation
+						cascade
+						delay={800}
+					>
+						<ul className="pl-5 space-y-3">
+							<li>
+								<div className="flex gap-2 items-center">
+									<div className="inline-block w-2 h-2 rounded-full bg-primary"></div>
+									<h4 className="font-bold">
+										Tailored for Students
+									</h4>
+								</div>
+								<p className="pl-4">
+									We&apos;ve designed our accommodations
+									specifically for the needs of students. From
+									well-appointed private rooms to spacious
+									common areas, we provide a variety of
+									options to suit your preferences and budget.
+								</p>
+							</li>
+							<li>
+								<div className="flex gap-2 items-center">
+									<div className="inline-block w-2 h-2 rounded-full bg-primary"></div>
+									<h4 className="font-bold">
+										Safety and Security
+									</h4>
+								</div>
+								<p className="pl-4">
+									Your peace of mind is our top priority. Our
+									properties are equipped with
+									state-of-the-art security measures,
+									including secure entry systems and 24/7
+									surveillance, ensuring that you feel safe at
+									all times.
+								</p>
+							</li>
+							<li>
+								<div className="flex gap-2 items-center">
+									<div className="inline-block w-2 h-2 rounded-full bg-primary"></div>
+									<h4 className="font-bold">
+										Convenient Locations
+									</h4>
+								</div>
+								<p className="pl-4">
+									Our properties are strategically located
+									near major universities and colleges, making
+									it easy to get to your classes, libraries,
+									and extracurricular activities. We
+									understand the value of a convenient
+									location in your academic journey.
+								</p>
+							</li>
+						</ul>
+					</FadeAnimation>
 				</div>
 			</div>
 
