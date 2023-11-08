@@ -12,8 +12,6 @@ import ApartmentVideo from "./__components/apartment-video";
 import ApartmentEnquireForm from "./__components/apartment-enquire-form";
 
 function RoomDetailsPage({ params: { id } }) {
-	console.log(id);
-
 	return (
 		<>
 			<ReturnBtn className="btn btn-sm btn-ghost">
