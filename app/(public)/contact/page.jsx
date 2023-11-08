@@ -1,24 +1,14 @@
-import Image from "next/image";
-import { FiMapPin, FiMail, FiPhone } from "react-icons/fi";
-import meetYouImg from "@/public/images/meet-you.jpg";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import ContactForm from "./__components/contact-form";
 
 function ContactUsPage() {
 	return (
 		<>
-			<h2 className="text-4xl font-bold my-5">Contact Us</h2>
-
-			<div className="relative h-32 rounded-2xl overflow-hidden mb-20">
-				<Image
-					src={meetYouImg}
-					fill
-					className="object-cover"
-					alt="Can't wait to here from you"
-				/>
-				<div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black/25">
-					<p className="text-2xl md:text-4xl text-white px-3 py-1 rounded-xl">
-						We can&apos;t wait to hear from you.
-					</p>
-				</div>
+			<div className="mb-20">
+				<h2 className="text-4xl font-bold mt-5">Contact Us</h2>
+				<p className="text-2xl ">
+					We can&apos;t wait to hear from you.
+				</p>
 			</div>
 
 			<div className="md:flex mb-10">
@@ -47,68 +37,7 @@ function ContactUsPage() {
 							Leave us a message
 						</h2>
 					</div>
-					<form action="">
-						<div className="form-control">
-							<label
-								htmlFor="name"
-								className="label justify-start"
-							>
-								Name<span className="text-error">*</span>
-							</label>
-							<input
-								type="text"
-								name="name"
-								id="name"
-								className="input input-bordered"
-							/>
-						</div>
-						<div className="form-control">
-							<label
-								htmlFor="email"
-								className="label justify-start"
-							>
-								Email<span className="text-error">*</span>
-							</label>
-							<input
-								type="email"
-								name="email"
-								id="email"
-								className="input input-bordered"
-							/>
-						</div>
-						<div className="form-control">
-							<label
-								htmlFor="subject"
-								className="label justify-start"
-							>
-								Subject
-							</label>
-							<input
-								type="text"
-								name="subject"
-								id="subject"
-								className="input input-bordered"
-							/>
-						</div>
-						<div className="form-control">
-							<label
-								htmlFor="message"
-								className="label justify-start"
-							>
-								Message<span className="text-error">*</span>
-							</label>
-
-							<textarea
-								name="message"
-								id="message"
-								className="textarea textarea-bordered"
-								rows={5}
-							></textarea>
-						</div>
-						<button className="btn btn-primary btn-block mt-10">
-							Send
-						</button>
-					</form>
+					<ContactForm />
 				</div>
 			</div>
 		</>
