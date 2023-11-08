@@ -13,7 +13,7 @@ async function getApartments(request) {
 		const price = searchParams.get("price");
 		const beds = searchParams.get("beds");
 
-		const query = {};
+		const query = { status: { $ne: "hidden" } };
 
 		if (location !== null && location !== "") {
 			query["location"] = { $regex: location, $options: "i" };
