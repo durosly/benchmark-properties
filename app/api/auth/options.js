@@ -6,7 +6,7 @@ import UserModel from "@/models/user";
 
 export const authOptions = {
 	session: {
-		maxAge: 1 * 24 * 60 * 2, // 24 hours
+		maxAge: 1 * 24 * 60 * 60, // 24 hours
 	},
 
 	providers: [
