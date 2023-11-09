@@ -7,7 +7,7 @@ function SearchApartmentForm() {
 	return (
 		<form
 			action="/rooms"
-			className="bg-white rounded-tr-xl py-5 px-10 flex flex-wrap items-end gap-5"
+			className="bg-base-100 rounded-tr-xl py-5 px-10 flex flex-wrap items-end gap-5"
 		>
 			<div className="form-control flex-1">
 				<label

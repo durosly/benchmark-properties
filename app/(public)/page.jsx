@@ -31,7 +31,7 @@ function Home() {
 				</Link>
 
 				<div className="mt-10 relative max-w-3xl hidden md:block">
-					<div className="bg-white max-w-[50%] py-5 px-10 rounded-t-xl relative">
+					<div className="bg-base-100 max-w-[50%] py-5 px-10 rounded-t-xl relative">
 						<p className="text-xl font-bold text-primary">
 							Find exactly what you need
 						</p>
