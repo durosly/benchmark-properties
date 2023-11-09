@@ -131,6 +131,7 @@ function Home() {
 							alt=""
 							fill
 							className="object-cover"
+							sizes="(min-width: 780px) 384px, (min-width: 640px) calc(100vw - 80px), (min-width: 420px) calc(100vw - 40px), calc(24vw + 264px)"
 						/>
 					</div>
 				</FadeAnimation>
@@ -238,6 +239,7 @@ function Home() {
 							alt=""
 							fill
 							className="object-cover"
+							sizes="(min-width: 1360px) 275px, (min-width: 780px) calc(22.32vw - 24px), (min-width: 640px) calc(100vw - 80px), (min-width: 420px) calc(100vw - 40px), calc(24vw + 264px)"
 						/>
 						<div className="overlay bg-gradient-to-t from-black absolute top-0 left-0 h-full w-full flex items-end">
 							<div className="px-5 py-2 text-white">
@@ -262,6 +264,7 @@ function Home() {
 							alt=""
 							fill
 							className="object-cover"
+							sizes="(min-width: 780px) 384px, (min-width: 640px) calc(100vw - 80px), (min-width: 420px) calc(100vw - 40px), calc(24vw + 264px)"
 						/>
 						<div className="overlay bg-gradient-to-t from-black absolute top-0 left-0 h-full w-full flex items-end">
 							<div className="px-5 py-2 text-white">
@@ -287,6 +290,7 @@ function Home() {
 							alt=""
 							fill
 							className="object-cover"
+							sizes="(min-width: 780px) 384px, (min-width: 640px) calc(100vw - 80px), (min-width: 420px) calc(100vw - 40px), calc(24vw + 264px)"
 						/>
 						<div className="overlay bg-gradient-to-t from-black absolute top-0 left-0 h-full w-full flex items-end">
 							<div className="px-5 py-2 text-white">

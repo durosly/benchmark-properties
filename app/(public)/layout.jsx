@@ -57,7 +57,7 @@ export default function PublicLayout({ children }) {
 									fill
 									priority={true}
 									placeholder="blur"
-									sizes="(min-width: 360px) 288px, calc(100vw - 32px)"
+									sizes="128px"
 								/>
 							</div>
 						</div>
@@ -206,6 +206,7 @@ export default function PublicLayout({ children }) {
 							placeholder="blur"
 							className="object-contain"
 							alt="benchmark"
+							sizes="180px"
 						/>
 					</div>
 					<ul className="menu ">
