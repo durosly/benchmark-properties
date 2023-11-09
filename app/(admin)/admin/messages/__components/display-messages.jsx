@@ -10,7 +10,7 @@ import { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import { DateTime } from "luxon";
 
-function DisplayMessages({ id }) {
+function DisplayMessages() {
 	const [page, setPage] = useState(1);
 
 	const { isPending, isError, data, error, isFetching, isPlaceholderData } =
@@ -98,7 +98,7 @@ function DisplayMessages({ id }) {
 										))
 									) : (
 										<tr>
-											<td>No customers found</td>
+											<td>No Message found</td>
 										</tr>
 									)}
 								</>
