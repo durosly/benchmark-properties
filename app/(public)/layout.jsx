@@ -90,9 +90,12 @@ export default function PublicLayout({ children }) {
 							</div>
 						</div>
 						<div className="navbar-end pr-4 md:pr-10">
-							<a className="btn btn-sm sm:btn-md btn-primary">
+							<Link
+								href="/rooms"
+								className="btn btn-sm sm:btn-md btn-primary"
+							>
 								Find Apartment
-							</a>
+							</Link>
 						</div>
 					</div>
 					{/* Page content here */}
@@ -106,6 +109,7 @@ export default function PublicLayout({ children }) {
 								fill
 								placeholder="blur"
 								className="object-contain"
+								alt="benchmark"
 							/>
 						</div>
 						<p>
@@ -201,6 +205,7 @@ export default function PublicLayout({ children }) {
 							fill
 							placeholder="blur"
 							className="object-contain"
+							alt="benchmark"
 						/>
 					</div>
 					<ul className="menu ">

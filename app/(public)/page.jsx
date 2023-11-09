@@ -20,9 +20,12 @@ function Home() {
 					with you in mind.
 				</p>
 
-				<button className="btn btn-primary md:hidden">
+				<Link
+					href="/rooms"
+					className="btn btn-primary md:hidden"
+				>
 					Find a home
-				</button>
+				</Link>
 
 				<div className="mt-10 relative max-w-3xl hidden md:block">
 					<div className="bg-white max-w-[50%] py-5 px-10 rounded-t-xl relative">
@@ -308,7 +311,7 @@ function Home() {
 					Find Your Dream Room Using Our Interactive Catalog
 				</p>
 				<Link
-					href="/nice"
+					href="/rooms"
 					className="btn btn-wide"
 				>
 					Check all houses
