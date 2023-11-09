@@ -10,6 +10,28 @@ import ApartmentInfo from "./__components/apartment-info";
 import ApartmentTitle from "./__components/apartment-title";
 import ApartmentVideo from "./__components/apartment-video";
 import ApartmentEnquireForm from "./__components/apartment-enquire-form";
+import ApartmentModel from "@/models/apartment";
+
+// TODO: use getMetadata here
+export async function generateMetadata({ params: { id } }, parent) {
+	// fetch data
+	const apartment = await ApartmentModel.findById(id);
+
+	// optionally access and extend (rather than replace) parent metadata
+	const previousImages = (await parent).openGraph?.images || [];
+	let image = "/images/og-main.png";
+
+	if (apartment.images.length > 0) {
+		image = `${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${apartment.images[0]}`;
+	}
+
+	return {
+		title: apartment.title,
+		openGraph: {
+			images: [image, ...previousImages],
+		},
+	};
+}
 
 function RoomDetailsPage({ params: { id } }) {
 	return (

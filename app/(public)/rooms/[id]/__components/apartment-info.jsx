@@ -8,6 +8,7 @@ import { LuBedSingle } from "react-icons/lu";
 import { MdOutlineOtherHouses } from "react-icons/md";
 import Skeleton from "react-loading-skeleton";
 import ShareBtn from "./share-btn";
+import { metaInfo } from "@/app/meta";
 
 function ApartmentInfo({ id }) {
 	const { isPending, isError, data, error } = useQuery({
@@ -72,7 +73,7 @@ function ApartmentInfo({ id }) {
 				) : (
 					<ShareBtn
 						title={title}
-						description={description}
+						description={description || metaInfo.description}
 					/>
 				)}
 			</div>

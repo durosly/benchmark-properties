@@ -1,21 +1,24 @@
-import Link from "next/link";
-import Image from "next/image";
 import logoImg from "@/logos/logo-main.png";
+import Image from "next/image";
+import Link from "next/link";
 import {
-	FiSidebar,
 	FiGrid,
-	FiUsers,
-	FiInfo,
-	FiMail,
 	FiHome,
+	FiInfo,
+	FiLogOut,
+	FiMail,
 	FiMousePointer,
 	FiSettings,
-	FiPhone,
-	FiLogOut,
+	FiSidebar,
+	FiUsers,
 	FiX,
 } from "react-icons/fi";
 import { NavigationEvents } from "../(public)/components/navigation-event";
 import SignoutButton from "../(public)/components/signout-btn";
+
+export const metadata = {
+	title: "Admin",
+};
 
 function AdminLayout({ children }) {
 	return (
