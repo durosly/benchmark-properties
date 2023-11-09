@@ -99,7 +99,7 @@ function ApartmentsDisplay() {
 											))
 										) : (
 											<tr>
-												<td>No customers found</td>
+												<td>No property found</td>
 											</tr>
 										)}
 									</>

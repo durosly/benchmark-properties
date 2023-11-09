@@ -82,7 +82,7 @@ function DisplayEnquiries() {
 										))
 									) : (
 										<tr>
-											<td>No customers found</td>
+											<td>No enquire found</td>
 										</tr>
 									)}
 								</>
