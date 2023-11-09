@@ -1,5 +1,9 @@
 import DisplayRooms from "./__components/display-rooms";
 
+export const metadata = {
+	title: "Find an apartment/property that meets your dream",
+};
+
 function RoomsPage() {
 	return (
 		<>

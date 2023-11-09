@@ -10,6 +10,8 @@ import {
 	FiCoffee,
 } from "react-icons/fi";
 
+export const metadata = { title: "Find out what else we can do for you" };
+
 function ServicesPage() {
 	return (
 		<>

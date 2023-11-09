@@ -1,6 +1,8 @@
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import ContactForm from "./__components/contact-form";
 
+export const metadata = { title: "Find out how to reach us" };
+
 function ContactUsPage() {
 	return (
 		<>

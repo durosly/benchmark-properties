@@ -3,6 +3,8 @@ import frontApartment from "@/public/images/front-apartment.png";
 import { FiEye, FiCrosshair } from "react-icons/fi";
 import Link from "next/link";
 
+export const metadata = { title: "Learn about us and what we do" };
+
 function AboutUsPage() {
 	return (
 		<>

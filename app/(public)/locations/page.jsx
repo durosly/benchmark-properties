@@ -2,6 +2,10 @@ import Image from "next/image";
 import mapImg from "@/public/images/map.jpg";
 import { FiNavigation } from "react-icons/fi";
 
+export const metadata = {
+	title: "Find out where to find us and our properties",
+};
+
 function LocationPage() {
 	return (
 		<>

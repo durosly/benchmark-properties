@@ -8,6 +8,8 @@ import { FiMap, FiUnlock, FiWifi } from "react-icons/fi";
 import SearchApartmentForm from "./components/search-apartment-form";
 import FadeAnimation from "./components/fade-animation";
 
+export const metadata = { title: "Find a new home" };
+
 function Home() {
 	return (
 		<>
